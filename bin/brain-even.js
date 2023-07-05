@@ -8,10 +8,22 @@ console.log(`Hello, ${askName()}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 function getRandom () {
-  return Math.round(Math.random())*10;
+  let randomInt = Math.round(Math.random()*100);
+  return randomInt;
 };
 console.log(getRandom());
+
 const getAnswer = () => {
-  const answer = readlineSync.question('Your answer: ');
+  let answer = readlineSync.question('Your answer: ');
   return answer;
 };
+
+getAnswer();
+
+if (getRandom() % 2 === 0) {
+  if (getAnswer() === 'yes'){
+    console.log('Correct!');
+  } else {
+    console.log(`${answer} is wrong answer ;(. Correct answer was ${notEven}.`);
+  }
+}
