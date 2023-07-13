@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import askName from '../src/cli.js';
-import brainEven from '../src/index.js'
+//import brainEven from '../src/index.js'
+import isEven from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/games/brainEven.js'
+import runGame from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/index.js'
+//console.log('Welcome to the Brain Games!');
 
-console.log('Welcome to the Brain Games!');
-console.log(`Hello, ${askName()}!`);
-
-brainEven();
+// brainEven();
+runGame('this evengame', 3);
