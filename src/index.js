@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
+import readlineSync, { question } from 'readline-sync';
 import askName from '../src/cli.js';
 import isEven from './games/brainEven.js';
 

@@ -6,4 +6,5 @@ import runGame from '/Users/vik/study/hexlet/projects/mindgames/frontend-project
 //console.log('Welcome to the Brain Games!');
 
 // brainEven();
+//isEven();
 runGame('this evengame', 3);
