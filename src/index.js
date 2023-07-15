@@ -5,7 +5,7 @@ import askName from '../src/cli.js';
 import isEven from './games/brainEven.js';
 
 
-function runGame(description, getRoundGame) {
+function runGameBrainEven(description, getRoundGame) {
   let name = askName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < getRoundGame; i++) {
@@ -25,4 +25,6 @@ function runGame(description, getRoundGame) {
   };
 };
 
-export default runGame;
+export default runGameBrainEven;
+
+
