@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import isEvenCalc from "../src/games/brainCalc";
+import { runGameCalc } from "/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/index.js"
 
-isEvenCalc();
+console.log('Welcome to the Brain Games!');
+
+runGameCalc(3);
