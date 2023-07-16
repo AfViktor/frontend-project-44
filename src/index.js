@@ -3,8 +3,8 @@
 import readlineSync, { question } from 'readline-sync';
 import askName from '../src/cli.js';
 import isEven from './games/brainEven.js';
-import {isEvenSum, isEvenSubtract, isEvenMulti, randomInt } from "../src/games/brainCalc.js";
-
+import { isEvenSum, isEvenSubtract, isEvenMulti, randomInt } from "../src/games/brainCalc.js";
+import { isEvenNod, getDivider } from "../src/games/brainNod.js"
 
 function runGameBrainEven(description, getRoundGame) {
   let name = askName();
@@ -70,3 +70,26 @@ function runGameCalc (getRoundGame) {
 };
 
 export { runGameBrainEven, runGameCalc};
+
+function runGameNode (getRoundGame) {
+  let name = askName();
+  console.log('Find the greatest common divisor of given numbers.');
+  for (let i = 0; i < getRoundGame; i++) {
+    let dataIsEvenNod = isEvenNod();
+    let a = dataIsEvenNod[0];
+    let b = dataIsEvenNod[1];
+    let divider = getDivider(a, b);
+    console.log(`${a} ${b}`);
+    let answer = Number(readlineSync.question('Your answer: '));
+    if (answer !== divider) {
+      return console.log(`${answer} is wrong. Correct answer was ${divider}. Try again ${name}`);
+        } else {
+          console.log('Correct!');
+    }
+    if (i === 2) {
+      console.log(`Congratulations, ${name}`);
+    }
+  }
+}
+
+export { runGameNode }
