@@ -5,6 +5,7 @@ import askName from '../src/cli.js';
 import isEven from './games/brainEven.js';
 import { isEvenSum, isEvenSubtract, isEvenMulti, randomInt } from "../src/games/brainCalc.js";
 import { isEvenNod, getDivider } from "../src/games/brainNod.js"
+import { replaceElement } from "../src/games/brainProgres.js";
 
 function runGameBrainEven(description, getRoundGame) {
   let name = askName();
@@ -93,3 +94,25 @@ function runGameNode (getRoundGame) {
 }
 
 export { runGameNode }
+
+function runGameProgressiv (getRoundGame) {
+  let name = askName();
+  console.log('What number is missing in this progression?   ');
+  for (let i = 0; i < getRoundGame; i++) {
+    let dataProgressive = replaceElement();
+    let showProgressive = dataProgressive[0].join(' ');
+    let rightAnswer = dataProgressive[1];
+    console.log(showProgressive);
+    let answer = Number(readlineSync.question('Your answer: '));
+    if (answer !== rightAnswer) {
+      return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}. Try again ${name}`);
+        } else {
+          console.log('Correct!');
+    }
+    if (i === 2) {
+      console.log(`Congratulations, ${name}`);
+    }
+  }
+}
+
+export { runGameProgressiv }
