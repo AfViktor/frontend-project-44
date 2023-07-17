@@ -6,8 +6,9 @@ import isEven from './games/brainEven.js';
 import { isEvenSum, isEvenSubtract, isEvenMulti, randomInt } from "../src/games/brainCalc.js";
 import { isEvenNod, getDivider } from "../src/games/brainNod.js"
 import { replaceElement } from "../src/games/brainProgres.js";
+import { isPrime } from "/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/games/brainPrime.js"
 
-function runGameBrainEven(description, getRoundGame) {
+function runGameBrainEven(getRoundGame) {
   let name = askName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < getRoundGame; i++) {
@@ -116,3 +117,21 @@ function runGameProgressiv (getRoundGame) {
 }
 
 export { runGameProgressiv }
+
+function gameIsPrime () {
+  let name = askName();
+  console.log('Answer yes if given number is prime. Otherwise answer no.');
+  let dataIsPrime = isPrime();
+  let showNumber = dataIsPrime[0];
+  let rightAnswer = dataIsPrime[1];
+  console.log(showNumber);
+  let answer = readlineSync.question('Your answer: ');
+    if (answer !== rightAnswer) {
+      return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}. Try again ${name}`);
+        } else {
+          console.log('Correct!');
+          console.log(`Congratulations, ${name}`);
+    }
+}
+
+export { gameIsPrime }
