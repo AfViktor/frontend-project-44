@@ -40,7 +40,7 @@ function runGameCalc (description, getRoundGame) {
     switch(counter) {
     case 1: 
       let dataIsEvenSum = isEvenSum();
-      console.log(`Question: ${dataIsEvenSum[0]} + ${dataIsEvenSum[1]}: `);
+      console.log(`Question: ${dataIsEvenSum[0]} + ${dataIsEvenSum[1]}`);
       let answerSum = Number(readlineSync.question('Your answer: '));
       if (answerSum !== dataIsEvenSum[2]) {
         return console.log(`${answerSum} is wrong. Correct answer was ${dataIsEvenSum[2]}.\nLet's try again, ${name}!`);
