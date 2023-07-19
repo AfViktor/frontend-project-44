@@ -19,7 +19,7 @@ function runGameBrainEven(description, getRoundGame) {
     console.log(`Question: ${randomInt}`);
     let answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {
-      return console.log(`${answer} is wrong. Correct answer was ${correctAnswer}. Try again ${name}`);
+      return console.log(`${answer} is wrong. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`);
     } else {
       console.log('Correct!');
     };
@@ -41,7 +41,7 @@ function runGameCalc (getRoundGame) {
       console.log(`Question: ${dataIsEvenSum[0]} + ${dataIsEvenSum[1]}: `);
       let answerSum = Number(readlineSync.question('Your answer: '));
       if (answerSum !== dataIsEvenSum[2]) {
-        return console.log(`${answerSum} is wrong. Correct answer was ${dataIsEvenSum[2]}. Try again ${name}`);
+        return console.log(`${answerSum} is wrong. Correct answer was ${dataIsEvenSum[2]}.Try again ${name}`);
       } else {
         console.log('Correct!');
       };
@@ -51,7 +51,7 @@ function runGameCalc (getRoundGame) {
       console.log(`Question: ${dataIsEvenSubtract[0]} - ${dataIsEvenSubtract[1]}: `);
       let answerSubtract = Number(readlineSync.question('Your answer: '));
       if (answerSubtract !== dataIsEvenSubtract[2]) {
-        return console.log(`${answerSubtract} is wrong. Correct answer was ${dataIsEvenSubtract[2]}. Try again ${name}`);
+        return console.log(`${answerSubtract} is wrong. Correct answer was ${dataIsEvenSubtract[2]}.\nLet's try again, ${name}!`);
       } else {
         console.log('Correct!');
       };
@@ -61,7 +61,7 @@ function runGameCalc (getRoundGame) {
       console.log(`Question: ${dataIsEvenMulti[0]} * ${dataIsEvenMulti[1]}: `);
       let answerMulti = Number(readlineSync.question('Your answer: '));
       if (answerMulti !== dataIsEvenMulti[2]) {
-        return console.log(`${answerMulti} is wrong. Correct answer was ${dataIsEvenMulti[2]}. Try again ${name}`);
+        return console.log(`${answerMulti} is wrong. Correct answer was ${dataIsEvenMulti[2]}.\nLet's try again, ${name}!`);
       } else {
         console.log('Correct!');
       };
@@ -87,7 +87,7 @@ function runGameNode (getRoundGame) {
     console.log(`Question: ${a} ${b}`);
     let answer = Number(readlineSync.question('Your answer: '));
     if (answer !== divider) {
-      return console.log(`${answer} is wrong. Correct answer was ${divider}. Try again ${name}`);
+      return console.log(`${answer} is wrong. Correct answer was ${divider}. \nLet's try again, ${name}!`);
         } else {
           console.log('Correct!');
     }
@@ -110,7 +110,7 @@ function runGameProgressiv (getRoundGame) {
     console.log(`Question: ${showProgressive}`);
     let answer = Number(readlineSync.question('Your answer: '));
     if (answer !== rightAnswer) {
-      return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}. Try again ${name}`);
+      return console.log(`'${answer}' is wrong. Correct answer was '${rightAnswer}'.\n Let's try again, ${name}!`);
         } else {
           console.log('Correct!');
     }
@@ -133,7 +133,7 @@ function gameIsPrime (getRoundGame) {
     console.log(`Question: ${showNumber}`);
     let answer = readlineSync.question('Your answer: ');
       if (answer !== rightAnswer) {
-        return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}. Try again ${name}`);
+        return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
       } else {
         console.log('Correct!');
     }
