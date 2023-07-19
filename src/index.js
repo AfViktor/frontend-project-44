@@ -9,6 +9,7 @@ import { replaceElement } from "../src/games/brainProgres.js";
 import { isPrime } from "../src/games/brainPrime.js"
 
 function runGameBrainEven(description, getRoundGame) {
+  console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -29,7 +30,8 @@ function runGameBrainEven(description, getRoundGame) {
   };
 };
 
-function runGameCalc (description, getRoundGame) {
+function runGameCalc (getRoundGame) {
+  console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
@@ -76,6 +78,7 @@ function runGameCalc (description, getRoundGame) {
 export { runGameBrainEven, runGameCalc};
 
 function runGameNode (description, getRoundGame) {
+  console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('Find the greatest common divisor of given numbers.');
@@ -100,6 +103,7 @@ function runGameNode (description, getRoundGame) {
 export { runGameNode }
 
 function runGameProgressiv (description, getRoundGame) {
+  console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('What number is missing in this progression?   ');
@@ -123,6 +127,7 @@ function runGameProgressiv (description, getRoundGame) {
 export { runGameProgressiv }
 
 function gameIsPrime (description, getRoundGame) {
+  console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('Answer yes if given number is prime. Otherwise answer no.');
