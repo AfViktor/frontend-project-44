@@ -30,7 +30,7 @@ function runGameBrainEven(description, getRoundGame) {
   };
 };
 
-function runGameCalc (getRoundGame) {
+function runGameCalc (description, getRoundGame) {
   console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
