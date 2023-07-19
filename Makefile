@@ -4,7 +4,7 @@ brain-games:
 	node bin/brain-games.js
 brain-even:
 	node bin/brain-even.js
-brain-gcd:
+brain-calc:
 	node bin/brain-calc.js
 brain-nod:
 	node bin/brain-nod.js
