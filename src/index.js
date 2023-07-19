@@ -41,7 +41,7 @@ function runGameCalc (getRoundGame) {
       console.log(`Question: ${dataIsEvenSum[0]} + ${dataIsEvenSum[1]}: `);
       let answerSum = Number(readlineSync.question('Your answer: '));
       if (answerSum !== dataIsEvenSum[2]) {
-        return console.log(`${answerSum} is wrong. Correct answer was ${dataIsEvenSum[2]}.Try again ${name}`);
+        return console.log(`${answerSum} is wrong. Correct answer was ${dataIsEvenSum[2]}.\nLet's try again, ${name}`);
       } else {
         console.log('Correct!');
       };
