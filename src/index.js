@@ -8,7 +8,7 @@ import { isEvenNod, getDivider } from "../src/games/brainNod.js"
 import { replaceElement } from "../src/games/brainProgres.js";
 import { isPrime } from "/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/games/brainPrime.js"
 
-function runGameBrainEven(getRoundGame) {
+function runGameBrainEven(description, getRoundGame) {
   let name = askName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < getRoundGame; i++) {
