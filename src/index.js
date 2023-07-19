@@ -29,7 +29,7 @@ function runGameBrainEven(description, getRoundGame) {
   };
 };
 
-function runGameCalc (getRoundGame) {
+function runGameCalc (description, getRoundGame) {
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
@@ -75,7 +75,7 @@ function runGameCalc (getRoundGame) {
 
 export { runGameBrainEven, runGameCalc};
 
-function runGameNode (getRoundGame) {
+function runGameNode (description, getRoundGame) {
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('Find the greatest common divisor of given numbers.');
@@ -99,7 +99,7 @@ function runGameNode (getRoundGame) {
 
 export { runGameNode }
 
-function runGameProgressiv (getRoundGame) {
+function runGameProgressiv (description, getRoundGame) {
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('What number is missing in this progression?   ');
@@ -122,7 +122,7 @@ function runGameProgressiv (getRoundGame) {
 
 export { runGameProgressiv }
 
-function gameIsPrime (getRoundGame) {
+function gameIsPrime (description, getRoundGame) {
   let name = askName();
   console.log(`Hello, ${name}!`);
   console.log('Answer yes if given number is prime. Otherwise answer no.');

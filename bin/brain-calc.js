@@ -4,4 +4,4 @@ import { runGameCalc } from "../src/index.js"
 
 console.log('Welcome to the Brain Games!');
 
-runGameCalc(3);
+runGameCalc('this isbrain-calc game', 3);
