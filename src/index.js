@@ -2,7 +2,7 @@
 
 import readlineSync, { question } from 'readline-sync';
 import askName from '../src/cli.js';
-import isEven from './games/brainEven.js';
+import isEven from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/games/brainEven.js';
 import { isEvenSum, isEvenSubtract, isEvenMulti, randomInt } from "../src/games/brainCalc.js";
 import { isEvenNod, getDivider } from "../src/games/brainNod.js"
 import { replaceElement } from "../src/games/brainProgres.js";
