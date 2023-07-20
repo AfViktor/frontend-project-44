@@ -130,7 +130,7 @@ function gameIsPrime (description, getRoundGame) {
   console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
-  console.log('Answer yes if given number is prime. Otherwise answer no.');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < getRoundGame; i++) {
     let dataIsPrime = isPrime();
     let showNumber = dataIsPrime[0];
