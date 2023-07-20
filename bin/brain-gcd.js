@@ -2,4 +2,4 @@
 
 import { runGameCalc } from "../src/index.js"
 
-runGameCalc('this brainCalc', 3);
+runGameNode('this braigcd', 3);
