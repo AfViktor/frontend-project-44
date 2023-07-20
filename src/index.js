@@ -106,7 +106,7 @@ function runGameProgressiv (description, getRoundGame) {
   console.log('Welcome to the Brain Games!');
   let name = askName();
   console.log(`Hello, ${name}!`);
-  console.log('What number is missing in this progression?   ');
+  console.log('What number is missing in the progression?   ');
   for (let i = 0; i < getRoundGame; i++) {
     let dataProgressive = replaceElement();
     let showProgressive = dataProgressive[0].join(' ');
