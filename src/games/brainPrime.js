@@ -4,11 +4,10 @@ function getRandomArbitrary(min, max) {
 
 function isPrime () {
   let number = getRandomArbitrary(1, 100);
-  if (number %  1 === 0 && number % number === 1) {
-    return [number, 'yes'];
-  } else {
-    return [number, 'no'];
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) return [number, 'no'];
   }
+  return [number, 'yes'];
 }
 
 export { isPrime }
