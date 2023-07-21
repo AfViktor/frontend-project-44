@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import { runGameBrainEven } from '../src/index.js';
+import { runGame } from '../src/index.js';
+import isEven from '../src/games/brainEven.js';
 
-runGameBrainEven('this evengame', isEven);
+runGame('Answer \"yes\" if the number is even, otherwise answer \"no\".', isEven);

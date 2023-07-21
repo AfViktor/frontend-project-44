@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import { runGameNode } from '../src/index.js';
+import { runGame } from '../src/index.js';
+import isEvenNod from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/games/brainNod.js';
 
-runGameNode('this braigcd', 3);
+runGame('Find the greatest common divisor of given numbers.', isEvenNod);

@@ -1,14 +1,19 @@
-function isEvenNod() {
-  const number1 = Math.round(Math.random() * 10);
-  const number2 = Math.round(Math.random() * 10);
-  return [number1, number2];
-}
+import randomInt from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/utils.js';
 
-function getDivider(a, b) {
+function isEvenNod() {
+  const number1 = randomInt(1, 10);
+  const number2 = randomInt(1, 10);
+  let question = '';
+  let rightAnswer = '';
+  function getDivider(a, b) {
   if (b === 0) {
     return a;
   }
   return getDivider(b, a % b);
 }
+  rightAnswer = String(getDivider(number1, number2));
+  question = `Question: ${number1} ${number2}`;
+  return [question, rightAnswer];
+}
 
-export { isEvenNod, getDivider };
+export default isEvenNod;

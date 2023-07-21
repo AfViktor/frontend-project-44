@@ -1,13 +1,16 @@
-function getRandomArbitrary(min, max) {
-  return Math.round(Math.random() * (max - min) + min);
-}
+import randomInt from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/utils.js';
 
 function isPrime() {
-  const number = getRandomArbitrary(1, 100);
+  const number = randomInt(1, 100);
+  let question = '';
   for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) return [number, 'no'];
+    if (number % i === 0) {
+      question = `Question: ${number}`;
+      return [question, 'no'];
+    }
   }
-  return [number, 'yes'];
+  question = `Question: ${number}`;
+  return [question, 'yes'];
 }
 
 export default isPrime;

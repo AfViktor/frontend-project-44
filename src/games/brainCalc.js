@@ -1,26 +1,22 @@
 import randomInt from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/utils.js';
 
-function isEvenSum() {
-  const number1 = Math.round(Math.random() * 10);
-  const number2 = Math.round(Math.random() * 10);
-  const sum = number1 + number2;
-  return [number1, number2, sum];
+function isCalc() {
+  let question = '';
+  let rightAnswer = '';
+  const number1 = randomInt(0, 10); 
+  const number2 = randomInt(0, 10);
+  const counter = randomInt(1, 3);
+  if (counter === 1) {
+    rightAnswer = String(number1 + number2);
+    question = `Question: ${number1} + ${number2}`;
+  } else if (counter === 2) {
+    rightAnswer = String(number1 - number2);
+    question = `Question: ${number1} - ${number2}`;
+  } else {
+    rightAnswer = String(number1 * number2);
+    question = `Question: ${number1} * ${number2}`;
+  }
+  return [question, rightAnswer];
 }
 
-function isEvenSubtract() {
-  const number1 = Math.round(Math.random() * 10);
-  const number2 = Math.round(Math.random() * 10);
-  const subrtact = number1 - number2;
-  return [number1, number2, subrtact];
-}
-
-function isEvenMulti() {
-  const number1 = Math.round(Math.random() * 10);
-  const number2 = Math.round(Math.random() * 10);
-  const multi = number1 * number2;
-  return [number1, number2, multi];
-}
-
-export {
-  isEvenSum, isEvenSubtract, isEvenMulti, randomInt,
-};
+export default isCalc;
