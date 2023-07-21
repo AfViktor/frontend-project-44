@@ -3,7 +3,7 @@ import randomInt from '../utils.js';
 function isCalc() {
   let question = '';
   let rightAnswer = '';
-  const number1 = randomInt(0, 10); 
+  const number1 = randomInt(0, 10);
   const number2 = randomInt(0, 10);
   const counter = randomInt(1, 3);
   if (counter === 1) {

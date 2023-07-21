@@ -6,11 +6,11 @@ function isEvenNod() {
   let question = '';
   let rightAnswer = '';
   function getDivider(a, b) {
-  if (b === 0) {
-    return a;
+    if (b === 0) {
+      return a;
+    }
+    return getDivider(b, a % b);
   }
-  return getDivider(b, a % b);
-}
   rightAnswer = String(getDivider(number1, number2));
   question = `Question: ${number1} ${number2}`;
   return [question, rightAnswer];
