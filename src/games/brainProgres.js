@@ -2,23 +2,22 @@ function getRandomArbitrary(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-function makeProgress () {
-  let progressive = [];
-  let countProgres = getRandomArbitrary(1, 9);
+function makeProgress() {
+  const progressive = [];
+  const countProgres = getRandomArbitrary(1, 9);
   progressive[0] = countProgres;
-  for (let i = 1; i < 10; i++) {
-    progressive[i] = progressive[i-1] + countProgres;
-    
+  for (let i = 1; i < 10; i += 1) {
+    progressive[i] = progressive[i - 1] + countProgres;
   }
   return progressive;
 }
 
-function replaceElement () {
-  let arrProgressiv = makeProgress();
-  let randomIndex = getRandomArbitrary(0, arrProgressiv.length - 1);
-  let elementArr = arrProgressiv[randomIndex];
+function replaceElement() {
+  const arrProgressiv = makeProgress();
+  const randomIndex = getRandomArbitrary(0, arrProgressiv.length - 1);
+  const elementArr = arrProgressiv[randomIndex];
   arrProgressiv[randomIndex] = '..';
   return [arrProgressiv, elementArr];
 }
 
-export { replaceElement }
+export default replaceElement;

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { runGameBrainEven } from '../src/index.js'
+import { runGameBrainEven } from '../src/index.js';
 
-runGameBrainEven('this evengame', 3);
+runGameBrainEven('this evengame', isEven);
