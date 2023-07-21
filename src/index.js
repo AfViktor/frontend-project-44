@@ -14,7 +14,7 @@ function runGame(description, func) {
     const rightAnswer = dataIsFunc[1];
     console.log(question);
     const answer = readlineSync.question('Your answer: ');
-    if (answer == rightAnswer) {
+    if (answer === rightAnswer) {
       console.log('Correct!');
     } else {
       return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
@@ -23,6 +23,7 @@ function runGame(description, func) {
       console.log(`Congratulations, ${name}!`);
     }
   }
+  return [description, func];
 }
 
 export default runGame;
