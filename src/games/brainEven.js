@@ -1,4 +1,4 @@
-import randomInt from '../src/utils.js';
+import randomInt from '../utils.js';
 
 function isEven() {
   let question = '';
