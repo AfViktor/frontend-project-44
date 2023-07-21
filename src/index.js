@@ -8,17 +8,16 @@ function runGame(description, func) {
   const name = askName();
   console.log(`Hello, ${name}!`);
   console.log(description);
-  //description = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
   for (let i = 0; i < 3; i += 1) {
     const dataIsFunc = func();
     const question = dataIsFunc[0];
     const rightAnswer = dataIsFunc[1];
     console.log(question);
     const answer = readlineSync.question('Your answer: ');
-    if (answer !== rightAnswer) {
-      return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
-    } else {
+    if (answer == rightAnswer) {
       console.log('Correct!');
+    } else {
+      return console.log(`${answer} is wrong. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
     }
     if (i === 2) {
       console.log(`Congratulations, ${name}!`);
@@ -27,4 +26,3 @@ function runGame(description, func) {
 }
 
 export default runGame;
-
