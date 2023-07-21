@@ -1,4 +1,4 @@
-import randomInt from '/Users/vik/study/hexlet/projects/mindgames/frontend-project-44/src/utils.js'
+import randomInt from './.src/utils.js';
 
 function isEven() {
   let question = '';
