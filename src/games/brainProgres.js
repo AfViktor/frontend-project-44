@@ -12,7 +12,7 @@ function makeProgress() {
   const randomIndex = randomInt(0, progressive.length - 1);
   const elementArr = progressive[randomIndex];
   progressive[randomIndex] = '..';
-  question = progressive.join(' ');
+  question = `Question: ${progressive.join(' ')}`;
   rightAnswer = String(elementArr);
   return [question, rightAnswer];
 }
