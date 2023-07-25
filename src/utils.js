@@ -1,6 +1,6 @@
-function randomInt(min, max) {
+function getRandomInt(min, max) {
   const rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 }
 
-export default randomInt;
+export default getRandomInt;

@@ -1,16 +1,26 @@
-import randomInt from '../utils.js';
+import getRandomInt from '../utils.js';
 
-function isEven() {
-  let question = '';
-  const number = randomInt(0, 10);
-  let rightAnswer = '';
+function getQuestion(number) {
+  return `Question: ${number}`;
+}
+
+function isEven(number) {
+  let evenNumber = '';
   if (number % 2 === 0) {
-    rightAnswer = 'yes';
+    evenNumber = 'yes';
   } else {
-    rightAnswer = 'no';
+    evenNumber = 'no';
   }
-  question = `Question: ${number}`;
+  return evenNumber;
+}
+
+function runGameEven() {
+  let question = '';
+  let rightAnswer = '';
+  const number = getRandomInt(0, 10);
+  rightAnswer = isEven(number);
+  question = getQuestion(number);
   return [question, rightAnswer];
 }
 
-export default isEven;
+export default runGameEven;
