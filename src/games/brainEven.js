@@ -5,13 +5,10 @@ function getQuestion(number) {
 }
 
 function isEven(number) {
-  let evenNumber = '';
   if (number % 2 === 0) {
-    evenNumber = 'yes';
-  } else {
-    evenNumber = 'no';
+    return 'yes';
   }
-  return evenNumber;
+  return 'no';
 }
 
 function runGameEven() {
