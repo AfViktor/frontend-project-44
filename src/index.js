@@ -21,7 +21,6 @@ function runGame(description, getRoundData) {
     }
   }
   console.log(`Congratulations, ${name}!`);
-  // return [description, getRoundData];
 }
 
 export default runGame;

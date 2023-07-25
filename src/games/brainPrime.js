@@ -7,7 +7,7 @@ function getQuestion(number) {
 function isPrime(number) {
   let numberIsPrime = '';
   for (let i = 2; i < number; i += 1) {
-    if (number % i === 0 && number % number === 0) {
+    if (number % 1 === 0 && number % number === 0) {
       numberIsPrime = 'no';
       return numberIsPrime;
     }
