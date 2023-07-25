@@ -15,13 +15,13 @@ function runGame(description, getRoundData) {
     const answer = readlineSync.question('Your answer: ');
     if (answer === rightAnswer) {
       console.log('Correct!');
-    } else { 
+    } else {
       console.log(`${answer} is wrong. Correct answer was ${rightAnswer}.\nLet's try again, ${name}!`);
       return;
     }
   }
   console.log(`Congratulations, ${name}!`);
-  return [description, getRoundData];
+  // return [description, getRoundData];
 }
 
 export default runGame;

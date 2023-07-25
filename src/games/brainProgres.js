@@ -17,7 +17,7 @@ function getProgressive() {
 function runGameProgress() {
   let question = '';
   let rightAnswer = '';
-  let progressive = getProgressive();
+  const progressive = getProgressive();
   const randomIndex = getRandomInt(0, progressive.length - 1);
   const elementArr = progressive[randomIndex];
   progressive[randomIndex] = '..';

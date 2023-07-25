@@ -1,9 +1,8 @@
-//import { question } from 'readline-sync';
 import getRandomInt from '../utils.js';
 
 function getQuestion(counter, number1, number2) {
   let question = '';
-  switch(counter) {
+  switch (counter) {
     case 1:
       question = `Question: ${number1} + ${number2}`;
       break;
@@ -12,6 +11,9 @@ function getQuestion(counter, number1, number2) {
       break;
     case 3:
       question = `Question: ${number1} * ${number2}`;
+      break;
+    default:
+      console.log('нет данных для вычислений');
   }
   return question;
 }
@@ -23,7 +25,7 @@ function runGameCalc() {
   const number2 = getRandomInt(0, 10);
   const counter = getRandomInt(1, 3);
   switch (counter) {
-    case 1: 
+    case 1:
       rightAnswer = String(number1 + number2);
       question = getQuestion(1, number1, number2);
       break;
@@ -34,6 +36,9 @@ function runGameCalc() {
     case 3:
       rightAnswer = String(number1 * number2);
       question = getQuestion(3, number1, number2);
+      break;
+    default:
+      console.log('нет данных для вычислений');
   }
   // if (counter === 1) {
   //   rightAnswer = String(number1 + number2);
