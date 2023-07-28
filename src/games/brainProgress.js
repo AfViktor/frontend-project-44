@@ -6,21 +6,21 @@ function getQuestion(progressive) {
   return progressive.join(' ');
 }
 
-function getProgressive(startProgress, lengthProgress) {
+function getProgression(startValue, step, length) {
   const arr = [];
-  const countProgres = getRandomInt(1, 9);
-  arr[0] = startProgress;
-  startProgress = '';
-  for (let i = 1; i < lengthProgress; i += 1) {
-    arr[i] = arr[i - 1] + countProgres;
+  arr[0] = startValue;
+  startValue = '';
+  for (let i = 1; i < length; i += 1) {
+    arr[i] = arr[i - 1] + step;
   }
   return arr;
 }
 
 function runGameProgress() {
-  const startProgress = getRandomInt(0, 10);
-  const lengthProgress = getRandomInt(5, 10);
-  const progressive = getProgressive(startProgress, lengthProgress);
+  const startValue = getRandomInt(0, 10);
+  const length = getRandomInt(5, 10);
+  const step = getRandomInt(1, 10);
+  const progressive = getProgression(startValue, step, length);
   const randomIndex = getRandomInt(0, progressive.length - 1);
   const elementArr = progressive[randomIndex];
   progressive[randomIndex] = '..';

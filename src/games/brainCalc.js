@@ -2,49 +2,27 @@
 
 import getRandomInt from '../utils.js';
 
-function getQuestion(symbol, number1, number2) {
-  let question = '';
-  const mathOperation = symbol;
-  switch (mathOperation) {
+function getRightAnswer(number1, number2, arithmeticOperations) {
+  switch (arithmeticOperations) {
     case '+':
-      question = `${number1} + ${number2}`;
-      break;
+      return String(number1 + number2);
     case '-':
-      question = `${number1} - ${number2}`;
-      break;
+      return String(number1 - number2);
     case '*':
-      question = `${number1} * ${number2}`;
-      break;
+      return String(number1 * number2);
     default:
-      throw new Error('error text');
+      throw new Error('Ошибка в выборе математической операции');
   }
-  return question;
 }
 
 function runGameCalc() {
-  let question = '';
-  let rightAnswer = '';
   const number1 = getRandomInt(0, 10);
   const number2 = getRandomInt(0, 10);
-  let arithmeticOperations = ['+', '-', '*'];
+  const symbolOperations = ['+', '-', '*'];
   const index = getRandomInt(0, 2);
-  arithmeticOperations = arithmeticOperations[index];
-  switch (arithmeticOperations) {
-    case '+':
-      rightAnswer = String(number1 + number2);
-      question = getQuestion('+', number1, number2);
-      break;
-    case '-':
-      rightAnswer = String(number1 - number2);
-      question = getQuestion('-', number1, number2);
-      break;
-    case '*':
-      rightAnswer = String(number1 * number2);
-      question = getQuestion('*', number1, number2);
-      break;
-    default:
-      throw new Error('error text');
-  }
+  const arithmeticOperations = symbolOperations[index];
+  const rightAnswer = getRightAnswer(number1, number2, arithmeticOperations);
+  const question = `${number1} ${arithmeticOperations} ${number2}`;
   return [question, rightAnswer];
 }
 
