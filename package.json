@@ -10,7 +10,7 @@
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
     "brain-nod": "bin/brain-nod.js",
-    "brain-progression": "bin/brain-progres.js",
+    "brain-progression": "bin/brain-progress.js",
     "brain-prime": "bin/brain-prime.js"
   },
   "scripts": {

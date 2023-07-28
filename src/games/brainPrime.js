@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
 
 function getQuestion(number) {
-  return `Question: ${number}`;
+  return number;
 }
 
 function isPrime(number) {
@@ -15,10 +15,8 @@ function isPrime(number) {
 
 function runGamePrime() {
   const number = getRandomInt(1, 100);
-  let question = '';
-  let rightAnswer = '';
-  rightAnswer = isPrime(number) ? 'yes' : 'no';
-  question = getQuestion(number);
+  const question = getQuestion(number);
+  const rightAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, rightAnswer];
 }
 

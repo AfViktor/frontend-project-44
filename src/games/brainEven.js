@@ -1,22 +1,20 @@
 import getRandomInt from '../utils.js';
 
 function getQuestion(number) {
-  return `Question: ${number}`;
+  return number;
 }
 
 function isEven(number) {
   if (number % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 }
 
 function runGameEven() {
-  let question = '';
-  let rightAnswer = '';
   const number = getRandomInt(0, 10);
-  rightAnswer = isEven(number);
-  question = getQuestion(number);
+  const question = getQuestion(number);
+  const rightAnswer = isEven(number) ? 'yes' : 'no';
   return [question, rightAnswer];
 }
 

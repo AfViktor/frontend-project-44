@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import readlineSync from 'readline-sync';
 import askName from './cli.js';
 
@@ -11,7 +9,7 @@ function runGame(description, getRoundData) {
   const gameRounds = 3;
   for (let i = 0; i < gameRounds; i += 1) {
     const [question, rightAnswer] = getRoundData();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === rightAnswer) {
       console.log('Correct!');
