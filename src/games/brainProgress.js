@@ -9,7 +9,6 @@ function getQuestion(progressive) {
 function getProgression(startValue, step, length) {
   const arr = [];
   arr[0] = startValue;
-  startValue = '';
   for (let i = 1; i < length; i += 1) {
     arr[i] = arr[i - 1] + step;
   }

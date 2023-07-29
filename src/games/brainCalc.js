@@ -18,11 +18,11 @@ function getRightAnswer(number1, number2, arithmeticOperations) {
 function runGameCalc() {
   const number1 = getRandomInt(0, 10);
   const number2 = getRandomInt(0, 10);
-  const symbolOperations = ['+', '-', '*'];
+  const symbolOperation = ['+', '-', '*'];
   const index = getRandomInt(0, 2);
-  const arithmeticOperations = symbolOperations[index];
-  const rightAnswer = getRightAnswer(number1, number2, arithmeticOperations);
-  const question = `${number1} ${arithmeticOperations} ${number2}`;
+  const arithmeticOperation = symbolOperation[index];
+  const rightAnswer = getRightAnswer(number1, number2, arithmeticOperation);
+  const question = `${number1} ${arithmeticOperation} ${number2}`;
   return [question, rightAnswer];
 }
 

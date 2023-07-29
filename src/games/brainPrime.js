@@ -11,9 +11,8 @@ function isPrime(number) {
 
 function runGamePrime() {
   const number = getRandomInt(1, 100);
-  const question = number;
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
-  return [question, rightAnswer];
+  return [number, rightAnswer];
 }
 
 export default runGamePrime;
