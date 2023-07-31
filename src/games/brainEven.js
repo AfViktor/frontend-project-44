@@ -9,9 +9,8 @@ function isEven(number) {
 
 function runGameEven() {
   const number = getRandomInt(0, 10);
-  const question = number;
   const rightAnswer = isEven(number) ? 'yes' : 'no';
-  return [question, rightAnswer];
+  return [number, rightAnswer];
 }
 
 export default runGameEven;

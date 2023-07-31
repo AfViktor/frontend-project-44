@@ -19,11 +19,11 @@ function runGameProgress() {
   const startValue = getRandomInt(0, 10);
   const length = getRandomInt(5, 10);
   const step = getRandomInt(1, 10);
-  const progressive = getProgression(startValue, step, length);
-  const randomIndex = getRandomInt(0, progressive.length - 1);
-  const elementArr = progressive[randomIndex];
-  progressive[randomIndex] = '..';
-  const question = getQuestion(progressive);
+  const progression = getProgression(startValue, step, length);
+  const randomIndex = getRandomInt(0, progression.length - 1);
+  const elementArr = progression[randomIndex];
+  progression[randomIndex] = '..';
+  const question = getQuestion(progression);
   const rightAnswer = String(elementArr);
   return [question, rightAnswer];
 }
